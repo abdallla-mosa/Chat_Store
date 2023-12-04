@@ -1,21 +1,33 @@
 <template>
-<section class="sign_in container mt-5">
-    <div class="row content_holder">
+<section class="sign_in container mt-5
+       
+    ">
+    <div class=" row content_holder
+        justify-content-center
+        align-item-center
+        ">
+
         <div class="
-        left bg-success p-3 col-12 col-lg-4 col-md-6
+        left bg-success
+         col-12 
+         col-md-6 
+         p-3
+         
         d-flex 
         flex-column
         justify-content-center
         align-items-sm-center
         ">
-            <h2 class="text-white">Have an Account!</h2>
+            <h2 class="text-white text-center">Don't Have an Account ?</h2>
             <p class="text-left">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> 
                 Praesentium nulla quidem voluptate 
             </p>
-            <button class="btn btn-lg btn-outline-light w-50">Sign In </button>
+             <RouterLink class="w-75" :to="{name:'SignUp'}">
+               <button class="btn btn-lg btn-outline-light w-100">Sign Up </button>
+              </RouterLink>
         </div>
-        <div class="right col-12 col-lg-4 col-md-6 mt-sm-3">
+        <div class="right col-12 p-2 py-3  col-md-6 mt-xs-3">
             <h3 class="text-center" >Log In </h3>
             <form action="#" @submit.prevent="signIn">
                 <div class="form-group d-flex flex-column">
@@ -58,8 +70,7 @@ export default {
     }
     await axios.post(`${this.baseURL}user/signIn`,user).then(res=>{
         localStorage.setItem('token',res.data.token);
-        // this.$router.push("/");
-        location.href="/"
+        this.$router.push("/");
         this.fetchCart();
         swal({
             text:"You Loged In Successfuly",
@@ -71,10 +82,11 @@ export default {
 }
 </script>
 
-<style>
-@media (max-width:767px) {
+<style socped>
+
+@media (max-width:999px) {
     .left{
-     border-radius: 10px;
+     border-radius: 10px !important;
     }
 }
 </style>

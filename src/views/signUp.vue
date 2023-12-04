@@ -11,9 +11,12 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Praesentium nulla quidem voluptate 
             </p>
-            <button class="btn btn-lg btn-outline-light w-75">Log In </button>
+           <RouterLink class="w-75" :to="{name:'signIn'}"> 
+            <button class="btn btn-lg btn-outline-light w-100">Sign In </button>
+            </RouterLink>
+
         </div>
-        <div class="right col-12 col-lg-7 col-md-6 mt-sm-3">
+        <div class="right col-12 col-lg-7 col-md-6  mt-xs-3">
             <h3>Create Account</h3>
             <form action="#" @submit.prevent="signUp">
                 <div class="form-group d-flex flex-column">
