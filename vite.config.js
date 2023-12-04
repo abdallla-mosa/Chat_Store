@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/cd 
 export default defineConfig({
-  base:"/chat_store",
+  base:"/Chat_Store/",
   plugins: [
     vue(),
   ],
